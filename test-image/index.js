@@ -2,7 +2,6 @@ require('dotenv/config');
 const express = require('express');
 const multer = require('multer');
 const AWS = require('aws-sdk');
-// const uuid = require('uuid/v4')
 
 const app =express();
 const port = 3000;
@@ -22,7 +21,6 @@ const upload = multer({storage}).single('image')
 
 app.post('/upload', upload, (req, res) => {
 
-    // const myFile = Date.now() + "--" + req.file.originalname
 
     let myFile = req.file.originalname
 
